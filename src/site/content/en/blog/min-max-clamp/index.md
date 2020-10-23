@@ -228,9 +228,11 @@ code:
 
 ```css
 p {
-  clamp(1.5rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 5vw, 3rem);
 }
 ```
+
+When you use `vw` units or limit how large text can get with `clamp()`, there is a chance a user may be unable to scale the text to 200% of its original size. If that happens, it is WCAG failure under [1.4.4 Resize text (AA)](https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=144#resize-text) so be certain to [test the results with zoom](https://adrianroselli.com/2019/12/responsive-type-and-zoom.html).
 
 
 ## Conclusion
@@ -241,6 +243,8 @@ responsive UIs. For more resources, check out:
 - [CSS Values and Units on
   MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
 - [CSS Values and Units Level 4 Spec](https://www.w3.org/TR/css-values-4/)
+- [CSS Tricks on Article on Inner-Element Width](https://css-tricks.com/using-max-for-an-inner-element-max-width/)
+- [min(), max(), clamp() Overview by Ahmad Shadeed](https://ishadeed.com/article/css-min-max-clamp/)
 
 Cover image from [@yer_a_wizard](https://unsplash.com/@yer_a_wizard) on
 Unsplash.
